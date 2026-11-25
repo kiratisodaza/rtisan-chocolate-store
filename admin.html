@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบจัดการออเดอร์ & แพ็คสินค้า | VELVET CACAO</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+  <div class="container no-print">
+    <div class="admin-header">
+      <h1>ระบบ Pick & Pack จัดการออเดอร์</h1>
+      <button onclick="fetchOrders()" class="btn-secondary">รีเฟรชข้อมูล</button>
+    </div>
+
+    <div class="filter-bar">
+      <button onclick="filterOrders('ALL')" class="filter-btn active">ทั้งหมด</button>
+      <button onclick="filterOrders('Pending')" class="filter-btn">รอแพ็ค (Pending)</button>
+      <button onclick="filterOrders('Packed')" class="filter-btn">แพ็คแล้ว (Packed)</button>
+    </div>
+
+    <div id="orders-container" class="orders-grid">
+      <p>กำลังโหลดข้อมูลออเดอร์...</p>
+    </div>
+  </div>
+
+  <!-- พื้นที่สำหรับพิมพ์ใบจ่าหน้าพัสดุ (แสดงเฉพาะตอนสั่ง Print) -->
+  <div id="print-area" class="print-only"></div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
