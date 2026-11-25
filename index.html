@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELVET CACAO | คราฟต์ช็อกโกแลตแท่ง</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>VELVET CACAO</h1>
+      <p>ช็อกโกแลตคราฟต์แท้จากเมล็ดโกโก้คัดพิเศษ เข้มข้น ละมุนลิ้น</p>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="products">
+      <h2>เลือกความอร่อยของคุณ</h2>
+      <div class="product-grid">
+        <!-- SKU 1 -->
+        <div class="product-card">
+          <img src="images/sku-dark70.jpg" alt="70% Single Origin Dark Chocolate">
+          <h3>70% Dark Chocolate Bar</h3>
+          <p class="sku-code">SKU: CHOC-DK70</p>
+          <p class="desc">ดาร์กช็อกโกแลตเข้มข้น 70% หอมกลิ่นผลไม้ตระกูลเบอร์รี่อ่อนๆ หวานน้อย</p>
+          <p class="price">180 บาท / แท่ง</p>
+          <div class="qty-control">
+            <button type="button" onclick="updateQty('sku1', -1)">-</button>
+            <input type="number" id="sku1-qty" value="0" min="0" readonly>
+            <button type="button" onclick="updateQty('sku1', 1)">+</button>
+          </div>
+        </div>
+
+        <!-- SKU 2 -->
+        <div class="product-card">
+          <img src="images/sku-hazelnut.jpg" alt="Roasted Hazelnut Milk Chocolate">
+          <h3>Roasted Hazelnut Milk Bar</h3>
+          <p class="sku-code">SKU: CHOC-HZ02</p>
+          <p class="desc">มิลค์ช็อกโกแลตเนื้อเนียน ผสานถั่วเฮเซลนัทอบกรอบเต็มคำ</p>
+          <p class="price">210 บาท / แท่ง</p>
+          <div class="qty-control">
+            <button type="button" onclick="updateQty('sku2', -1)">-</button>
+            <input type="number" id="sku2-qty" value="0" min="0" readonly>
+            <button type="button" onclick="updateQty('sku2', 1)">+</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="checkout-form">
+      <h2>ข้อมูลจัดส่งพัสดุ</h2>
+      <div class="summary-box">
+        <p>ยอดรวมทั้งสิ้น: <strong id="total-price">0</strong> บาท (ส่งฟรีทั่วประเทศ)</p>
+      </div>
+      <form id="order-form">
+        <div class="form-group">
+          <label>ชื่อ-นามสกุล ผู้รับ *</label>
+          <input type="text" id="cust-name" required placeholder="เช่น สมชาย ใจดี">
+        </div>
+        <div class="form-group">
+          <label>เบอร์โทรศัพท์ *</label>
+          <input type="tel" id="cust-phone" required placeholder="เช่น 0812345678">
+        </div>
+        <div class="form-group">
+          <label>ที่อยู่จัดส่ง (พร้อมรหัสไปรษณีย์) *</label>
+          <textarea id="cust-address" rows="3" required placeholder="บ้านเลขที่, ถนน, แขวง/ตำบล, เขต/อำเภอ, จังหวัด, รหัสไปรษณีย์"></textarea>
+        </div>
+        <button type="submit" id="submit-btn" class="btn-primary">ยืนยันการสั่งซื้อ</button>
+      </form>
+      <div id="order-status" class="status-msg"></div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
