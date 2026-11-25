@@ -1,5 +1,5 @@
 // *** นำ Web app URL เดียวกันมาใส่ตรงนี้ ***
-const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxEM4L65W3JIkLLDuRZ4ZgN0lK8owC4iueXhqSFMDiMhqmnD49Y0bl5fZ611W-box0/exec';
 
 let allOrders = [];
 let currentFilter = 'ALL';
